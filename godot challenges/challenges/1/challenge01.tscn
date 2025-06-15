@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyiiwmdgkehuc"]
+
+[ext_resource type="Script" uid="uid://cqv7r06pnmyik" path="res://challenges/1/button.gd" id="2_iq8qx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_iq8qx")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 183.0
+offset_right = 467.0
+offset_bottom = 384.0
+text = "Iniciar"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 195.0
+offset_right = 918.0
+offset_bottom = 364.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

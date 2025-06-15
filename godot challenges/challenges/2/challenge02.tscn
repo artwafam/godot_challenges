@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://df6s2dpwr245k"]
+
+[ext_resource type="Script" uid="uid://c60k1qvyl5m3f" path="res://challenges/2/challenge_02.gd" id="1_g3dnd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g3dnd")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 105.0
+offset_right = 369.0
+offset_bottom = 151.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 45.0
+offset_right = 368.0
+offset_bottom = 87.0
+text = "Digite um número"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 107.0
+offset_right = 677.0
+offset_bottom = 149.0
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

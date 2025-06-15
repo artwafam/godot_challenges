@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://csehtxswkis46"]
+
+[ext_resource type="Script" uid="uid://cwwbrp2eg2ws8" path="res://challenges/3/challenge_03.gd" id="1_76xh4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_76xh4")
+
+[node name="Vida" type="Label" parent="."]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 176.0
+offset_right = 325.0
+offset_bottom = 199.0
+text = "Vida"
+
+[node name="VidaInimigo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 174.0
+offset_right = 664.0
+offset_bottom = 197.0
+text = "vida inimigo"
+
+[node name="LOG" type="Label" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 75.0
+offset_right = 476.0
+offset_bottom = 98.0
+text = "LOG"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 243.0
+offset_right = 611.0
+offset_bottom = 431.0
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
