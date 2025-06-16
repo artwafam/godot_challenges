@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://ho0rqnijtbx4"]
+
+[ext_resource type="Script" uid="uid://msasnn4mmsqh" path="res://challenges/6/challenge_06.gd" id="1_fylft"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fylft")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 30.0
+offset_right = 415.0
+offset_bottom = 65.0
+text = "Digite a altura do triângulo:"
+
+[node name="Altura" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 28.0
+offset_right = 328.563
+offset_bottom = 59.0
+
+[node name="Triangle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 76.0
+offset_right = 911.0
+offset_bottom = 567.0
+
+[connection signal="text_submitted" from="Altura" to="." method="_on_altura_text_submitted"]

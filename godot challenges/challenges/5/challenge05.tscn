@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmi8duf5whiey"]
+
+[ext_resource type="Script" uid="uid://bm1gk7gowlja5" path="res://challenges/5/challenge_05.gd" id="1_2h7fr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2h7fr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 35.0
+offset_right = 328.0
+offset_bottom = 58.0
+text = "Digite um número de 0 a 10 e veja sua tabuada"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 66.0
+offset_right = 130.563
+offset_bottom = 97.0
+
+[node name="Tabuada" type="Label" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 120.0
+offset_right = 438.0
+offset_bottom = 389.0
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
